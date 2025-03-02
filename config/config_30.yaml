@@ -1,0 +1,19 @@
+csv_path: "data/updated_dataset_threshold_1_5.csv"
+window_size: 2880           # 30 * 96 (30 days)
+forecast_length: 2880       # 30 * 96
+batch_size: 16
+epochs: 200
+test_size: 0.2
+val_size: 0.2
+input_dim: 8
+hidden_dim: 256
+num_layers: 2
+dropout: 0.2617
+num_heads: 4
+quantiles: [0.1, 0.5, 0.9]
+optimizer_lr: 0.0001
+output_dir: "saved_models/30days"
+model_path: "saved_models/30days/best_model.pth"
+scalers_path: "saved_scalers/30days_scalers.pkl"
+inference_csv_path: "data/inference_input_30days.csv"
+predictions_csv_path: "saved_models/30days/predictions.csv"

@@ -1,0 +1,19 @@
+csv_path: "data/updated_dataset_threshold_1_5.csv"
+window_size: 96             # 96 time steps ( 96 hours)
+forecast_length: 96         # 96 time steps
+batch_size: 16
+epochs: 5
+test_size: 0.2
+val_size: 0.2
+input_dim: 8
+hidden_dim: 256
+num_layers: 2
+dropout: 0.2617
+num_heads: 4
+quantiles: [0.1, 0.5, 0.9]
+optimizer_lr: 0.0001
+output_dir: "saved_models/oneday"          
+model_path: "saved_models/oneday/best_model.pth"  # path for saved model
+scalers_path: "saved_scalers/oneday_scalers.pkl"  # path for saved scalers
+inference_csv_path: "data/inference_input_oneday.csv"
+predictions_csv_path: "predictions/oneday/predictions.csv"
